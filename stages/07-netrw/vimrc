@@ -1,0 +1,14 @@
+" Essential Vim settings — Section 3 base plus the netrw tweak from Section 7
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set noswapfile
+" Vexplore opens files in the previous (right-hand) window
+let g:netrw_browse_split=4
