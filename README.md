@@ -10,6 +10,47 @@ stages/   configuration snapshots at each milestone of the course
 nvim/     the final, complete modern config (Sections 15–19) ← clone target
 ```
 
+## Files used in each lecture
+
+The course is organised into four sections. Here is the file you work with in
+every lecture — clone this repo and open the matching file as you follow along.
+
+**Section 1 — Introduction** (no files yet; clone the repo and you're ready)
+| Lecture | File(s) |
+|---|---|
+| 1. Introduction | *this repository — clone it now* |
+| 2. Installing Vim on Any OS | — |
+| 3. Getting Started with Modes | `demo/sample.py` (practice buffer) |
+
+**Section 2 — Core Vim Skills**
+| Lecture | File(s) |
+|---|---|
+| 4. Configuring Vim with vimrc | `stages/03-essential-vimrc/vimrc` |
+| 5. Advanced Navigation and Motions | `demo/app.py` |
+| 6. Editing Basics – Operators and Text Objects | `demo/app.py`, `demo/sample.py` |
+| 7. Advanced Editing – Registers and Macros | `demo/sample.py` |
+| 8. File Management with netrw | `stages/07-netrw/vimrc` |
+| 9. The Leader Key and Custom Mappings | `stages/07-netrw/vimrc` |
+
+**Section 3 — Moving to Neovim**
+| Lecture | File(s) |
+|---|---|
+| 10. Switching to Neovim | `stages/10-neovim-switch/init.vim` |
+| 11. Colorschemes and Appearance | `stages/10-neovim-switch/colors/hackertheme.vim` |
+| 12. Installing Plugins | `stages/12-lua-config/` |
+| 13. Configuring Neovim with Lua | `stages/12-lua-config/init.lua`, `lua/myconfig/init.lua` |
+| 14. Native LSP and Autocompletion | `stages/13-lsp/` |
+
+**Section 4 — Building a Modern IDE** (all from `nvim/`, the final config)
+| Lecture | File(s) |
+|---|---|
+| 15. Quick Reference and Cheatsheet | this README + `nvim/README.md` |
+| 16. A Modern Modular Config | `nvim/init.lua`, `nvim/lua/config/` |
+| 17. The Complete IDE Setup | `nvim/lua/plugins/` (editor, lsp, completion, ui) |
+| 18. Debugging and Testing | `nvim/lua/plugins/dap.lua`, `nvim/lua/plugins/neotest.lua` |
+| 19. Git Inside the Editor | `nvim/lua/plugins/git.lua`, `nvim/lua/plugins/octo.lua` |
+| 20. Power Tips and Next Steps | `nvim/` (the whole config) |
+
 ## The modern config (Sections 15–19)
 
 Requirements:
@@ -28,7 +69,7 @@ mv ~/.config/nvim ~/.config/nvim.backup 2>/dev/null
 mv ~/.local/share/nvim ~/.local/share/nvim.backup 2>/dev/null
 
 # 2. Put this repo's nvim/ directory in place
-git clone <this-repo-url> ~/vim-course
+git clone https://github.com/KishoreNewton/vim-course ~/vim-course
 cp -r ~/vim-course/nvim ~/.config/nvim
 
 # 3. Launch. lazy.nvim bootstraps itself, restores the exact plugin
