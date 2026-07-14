@@ -106,12 +106,34 @@ as it stands at that point in the course:
 | `stages/12-lua-config/` | 12 | The pure-Lua `init.lua` conversion |
 | `stages/13-lsp/` | 13–14 | vim-plug, Mason, and native LSP wiring |
 | `nvim/` | 15–19 | The complete modern config |
+| `stages/21-first-plugin/` | 21 | scratchpad.nvim v1 — the module pattern + lazy `dir=` spec |
+| `stages/22-commands-config/` | 22 | + config merge, `:Scratch`, `<leader>j` |
+| `stages/23-floating-window/` | 23 | + the floating window, toggle, save-on-`q` |
+| `scratchpad.nvim/` | 21–24 | The finished plugin — README, `:help`, MIT license |
 
 Vim-era stages: copy `vimrc` to `~/.vimrc`.
 Neovim stages: copy the stage's contents to `~/.config/nvim/`
 (e.g. `cp -r stages/12-lua-config/* ~/.config/nvim/`).
 Sections 11–13 use [vim-plug](https://github.com/junegunn/vim-plug) — install
 it first, then run `:PlugInstall`.
+
+## Build your own plugin (Sections 21–24)
+
+Sections 21–24 build **scratchpad.nvim** — a floating, per-project notes pad —
+from an empty folder to a shippable repo. The plugin stages hold the
+`lua/scratchpad/init.lua` as it stands at the end of each section, plus the
+`plugins-scratchpad.lua` spec for that stage (it belongs at
+`~/.config/nvim/lua/plugins/scratchpad.lua`). To follow along:
+
+```sh
+mkdir -p ~/projects/scratchpad.nvim
+cp -r stages/21-first-plugin/lua ~/projects/scratchpad.nvim/
+cp stages/21-first-plugin/plugins-scratchpad.lua \
+   ~/.config/nvim/lua/plugins/scratchpad.lua
+```
+
+The finished plugin lives in [`scratchpad.nvim/`](scratchpad.nvim/) — diff
+your build against it, break it, extend it, and publish your own.
 
 ## Demo files
 

@@ -1,0 +1,12 @@
+*scratchpad.txt*    One floating notes pad per project
+
+========================================
+INTRODUCTION                    *scratchpad*
+
+Toggle a per project markdown pad with :Scratch or <leader>j.
+
+OPTIONS                 *scratchpad-options*
+
+Call setup(opts). Fields merge over defaults, see the README.
+
+vim:tw=78:ts=8:ft=help:norl:
