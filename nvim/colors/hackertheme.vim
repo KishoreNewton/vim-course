@@ -81,10 +81,23 @@ highlight netrwDir guifg=#4FC1FF
 highlight LineNr guifg=#FDE4E3
 highlight StatusLine guifg=#FDE4E3 guibg=#000000 ctermfg=NONE ctermbg=NONE cterm=italic
 highlight StatusLineNC guifg=#FF5733
+" Cursor Line, Search and Matching Brackets
+highlight CursorLine guibg=#1a1a1a
+highlight Search guifg=#0a0a0a guibg=#9DE0AD
+highlight MatchParen guifg=#0a0a0a guibg=#FFDCA2 gui=bold
 " Tab Line
 highlight TabLine guibg=#355C7D ctermfg=NONE ctermbg=NONE cterm=italic
 highlight TabLineSel guifg=#05386B guibg=#5CDB95 gui=bold ctermfg=NONE ctermbg=NONE cterm=bold
 highlight TabLineFill guifg=#111111 guibg=#000000 ctermfg=254 ctermbg=238
+" Treesitter Captures
+" Modern Neovim highlights via treesitter (@keyword, @string, ...) rather than the
+" classic syntax groups above. Neovim links most of these by default, but pinning
+" them here keeps the theme correct on any version and for any parser.
+hi! link @keyword Keyword
+hi! link @function Function
+hi! link @string String
+hi! link @comment Comment
+hi! link @variable Identifier
 " LSP Colors
 " hi @lsp.type.function guifg=Yellow
 " hi @lsp.type.variable.lua guifg=Green
