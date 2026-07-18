@@ -4,5 +4,6 @@ return {
   {
     dir = vim.fn.expand("~/projects/scratchpad.nvim"),
     opts = { title = " Notes " },
+    lazy = false, -- this config lazy-loads by default; wake ours at boot
   },
 }

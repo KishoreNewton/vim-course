@@ -15,6 +15,7 @@ While following the course (local checkout):
 {
   dir = vim.fn.expand("~/projects/scratchpad.nvim"),
   opts = {},
+  lazy = false, -- the course config lazy-loads by default
 }
 ```
 
