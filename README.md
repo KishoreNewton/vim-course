@@ -12,44 +12,20 @@ nvim/     the final, complete modern config (Sections 15–19) ← clone target
 
 ## Files used in each lecture
 
-The course is organised into four sections. Here is the file you work with in
-every lecture — clone this repo and open the matching file as you follow along.
+Not sure which file to open for a given lecture?
+**→ [`WORKING-FILES.md`](WORKING-FILES.md)** maps every lecture to the exact
+folder and file(s) you work in, across all five sections — clone this repo and
+open the matching file as you follow along.
 
-**Section 1 — Introduction** (no files yet; clone the repo and you're ready)
-| Lecture | File(s) |
-|---|---|
-| 1. Introduction | *this repository — clone it now* |
-| 2. Installing Vim on Any OS | — |
-| 3. Getting Started with Modes | `demo/sample.py` (practice buffer) |
+At a glance:
 
-**Section 2 — Core Vim Skills**
-| Lecture | File(s) |
+| Section | You work in |
 |---|---|
-| 4. Configuring Vim with vimrc | `stages/03-essential-vimrc/vimrc` |
-| 5. Advanced Navigation and Motions | `demo/app.py` |
-| 6. Editing Basics – Operators and Text Objects | `demo/app.py`, `demo/sample.py` |
-| 7. Advanced Editing – Registers and Macros | `demo/sample.py` |
-| 8. File Management with netrw | `stages/07-netrw/vimrc` |
-| 9. The Leader Key and Custom Mappings | `stages/07-netrw/vimrc` |
-
-**Section 3 — Moving to Neovim**
-| Lecture | File(s) |
-|---|---|
-| 10. Switching to Neovim | `stages/10-neovim-switch/init.vim` |
-| 11. Colorschemes and Appearance | `stages/10-neovim-switch/colors/hackertheme.vim` |
-| 12. Installing Plugins | `stages/12-lua-config/` |
-| 13. Configuring Neovim with Lua | `stages/12-lua-config/init.lua`, `lua/myconfig/init.lua` |
-| 14. Native LSP and Autocompletion | `stages/13-lsp/` |
-
-**Section 4 — Building a Modern IDE** (all from `nvim/`, the final config)
-| Lecture | File(s) |
-|---|---|
-| 15. Quick Reference and Cheatsheet | this README + `nvim/README.md` |
-| 16. A Modern Modular Config | `nvim/init.lua`, `nvim/lua/config/` |
-| 17. The Complete IDE Setup | `nvim/lua/plugins/` (editor, lsp, completion, ui) |
-| 18. Debugging and Testing | `nvim/lua/plugins/dap.lua`, `nvim/lua/plugins/neotest.lua` |
-| 19. Git Inside the Editor | `nvim/lua/plugins/git.lua`, `nvim/lua/plugins/octo.lua` |
-| 20. Power Tips and Next Steps | `nvim/` (the whole config) |
+| 1 — Introduction | clone the repo, then `demo/sample.py` |
+| 2 — Core Vim Skills | `demo/` (`sample.py`, `app.py`, `guide.md`) + your `~/.vimrc` |
+| 3 — Moving to Neovim | `~/.config/nvim/` (build it up) + `demo/` |
+| 4 — Building a Modern IDE | the finished `~/.config/nvim/` (from `nvim/`) + `demo/` |
+| 5 — Build Your Own Plugin | `~/projects/scratchpad.nvim/` |
 
 ## The modern config (Sections 15–19)
 
