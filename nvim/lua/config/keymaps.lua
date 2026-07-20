@@ -38,7 +38,11 @@ map('x', '<', '<gv', { desc = 'Indent left (keep selection)' })
 map('x', '>', '>gv', { desc = 'Indent right (keep selection)' })
 
 -- Join lines but keep the cursor put.
-map('n', 'J', 'mzJ`z', { desc = 'Join lines (keep cursor)' })
+-- Count-aware: a plain string mapping swallows the count, so `8J` expanded to
+-- `8mz J \`z` and joined only TWO lines. Returning the rhs from an expr fn lets
+-- v:count1 through, so 8J joins 8 lines as Vim documents.
+vim.keymap.set('n', 'J', function() return 'mz' .. vim.v.count1 .. 'J`z' end,
+  { expr = true, desc = 'Join lines (keep cursor)' })
 
 -- ── Window navigation / resize ──────────────────────────────────────────────
 -- <C-hjkl> (move) and <A-hjkl> (resize) are owned by smart-splits.nvim (see

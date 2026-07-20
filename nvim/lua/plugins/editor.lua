@@ -107,6 +107,10 @@ return {
   {
     'kevinhwang91/nvim-bqf',
     ft = 'qf',
-    opts = {},
+    -- bqf defaults the preview float to winblend = 12. Over a dark theme that
+    -- 12% blend lets the buffer underneath show THROUGH the preview, so the
+    -- two layers interleave into unreadable phantom code (a stale VERSION /
+    -- MAX_RETRIES appearing to duplicate on blank lines). Make it opaque.
+    opts = { preview = { winblend = 0 } },
   },
 }
