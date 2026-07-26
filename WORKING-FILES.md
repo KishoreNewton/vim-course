@@ -78,11 +78,13 @@ are instantly caught up.
 
 ## Section 5 — Build Your Own Plugin
 
-Built in your own `~/projects/scratchpad.nvim/`, with the loader spec at
+The section opens with a tour of the documentation (nothing to clone). The build
+itself happens in your own `~/projects/scratchpad.nvim/`, with the loader spec at
 `~/.config/nvim/lua/plugins/scratchpad.lua`.
 
 | Lecture | Work in | File(s) | What you do |
 |---|---|---|---|
+| **What The Editor Gives You** | — *(the built-in manual)* | `:h lua-guide`, `:h write-plugin`, `:h runtimepath`, `:h news`, `:h help-summary` | What Neovim exposes (`api`, `fn`, `opt`, `keymap`, `lsp`, `treesitter`, `diagnostic`, `uv`, `ui`) and how to find the docs for any function — `:h <name>`, `Ctrl-]` / `Ctrl-o`, `gO`, `<leader>fh`, `:helpgrep` → quickfix |
 | Your First Plugin | `~/projects/scratchpad.nvim/` | `lua/scratchpad/init.lua`, `~/.config/nvim/lua/plugins/scratchpad.lua` | A plugin is just a folder: runtimepath, the module pattern, a lazy `dir=` spec |
 | Config, Commands, and Keymaps | `~/projects/scratchpad.nvim/` | `lua/scratchpad/init.lua` | Defaults + config merge, `:Scratch`, `<leader>j` |
 | The Floating Window | `~/projects/scratchpad.nvim/` | `lua/scratchpad/init.lua` | Buffers vs windows, `nvim_open_win`, toggle, save-on-`q` |
