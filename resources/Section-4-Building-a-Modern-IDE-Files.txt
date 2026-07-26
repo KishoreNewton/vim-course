@@ -1,0 +1,101 @@
+SECTION 4 - BUILDING A MODERN IDE
+What you work on, and where to get it
+=====================================================================
+
+CLONE THE COURSE REPOSITORY (if you have not already)
+
+    git clone https://github.com/KishoreNewton/vim-course
+    cd vim-course
+
+Repository: https://github.com/KishoreNewton/vim-course
+
+
+WHERE YOU WORK IN THIS SECTION
+
+    ~/.config/nvim/   the modular config, and later the finished one
+    nvim/             the finished config in this repo - the thing you
+                      install partway through the section
+    demo/             the files you drive it with
+
+REQUIREMENTS for the finished config
+    Neovim 0.11+ (0.12 recommended), git, a C compiler and make,
+    ripgrep and fd (recommended), and a Nerd Font for icons.
+
+
+INSTALLING THE FINISHED CONFIG (done on camera in this section)
+
+    # back up whatever you have - this replaces your config
+    mv ~/.config/nvim ~/.config/nvim.backup
+    mv ~/.local/share/nvim ~/.local/share/nvim.backup
+
+    git clone https://github.com/KishoreNewton/vim-course ~/vim-course
+    cp -r ~/vim-course/nvim ~/.config/nvim
+
+    nvim      # lazy.nvim bootstraps itself and Mason installs servers
+
+
+THIS SECTION, LECTURE BY LECTURE
+
+    Quick Reference and Cheatsheet
+        Files:    this repo README plus nvim/README.md
+
+    A Modern Modular Config
+        Work in:  ~/.config/nvim/
+        Files:    init.lua, lua/config/options.lua, keymaps.lua,
+                  lazy.lua, lua/plugins/, lsp/
+        You do:   split the flat config into a real modular layout and
+                  switch to lazy.nvim
+
+    Install the Finished Config
+        Work in:  ~/.config/nvim/ and demo/
+        Files:    swaps in this repo's nvim/ folder, then opens app.py
+        You do:   back up your build, install the finished editor,
+                  first boot with :Lazy and :Mason
+
+    The Complete IDE Setup
+        Work in:  ~/.config/nvim/ and demo/
+        Files:    lua/config/options.lua, demo/app.py
+        You do:   the grand tour - pickers, git signs, statusline
+
+    Format, Fix, and Select Smarter
+        Work in:  demo/
+        Files:    demo/app.py
+        You do:   format-on-save with conform, LSP code actions,
+                  treesitter text objects, snippets
+
+    Debugging and Testing
+        Work in:  demo/
+        Files:    demo/sample.py, demo/test_app.py
+        You do:   DAP breakpoints and stepping, then run the suite
+
+    Git Inside the Editor
+        Work in:  demo/ (as a git repo)
+        Files:    demo/app.py
+        You do:   gitsigns, lazygit, diffview
+
+    Merge Conflicts
+        Work in:  demo/ (mid-merge)
+        Files:    demo/app.py
+        You do:   read the conflict markers, resolve both sides, and
+                  conclude the merge
+
+    Power Tips and Next Steps
+        Work in:  demo/
+        Files:    demo/scratch.lua
+        You do:   buffer tricks, quickfix, and where to go next
+
+    Quickfix, Project Replace, and Sessions
+        Work in:  demo/
+        Files:    demo/app.py, demo/worker.py, demo/sample.py
+        You do:   :grep into quickfix into :cfdo, grug-far project
+                  replace, and persistence sessions
+
+
+RECREATING THE PLAYGROUND EXACTLY
+
+    A git repo is needed for the gitsigns / lazygit / diffview demos,
+    and language servers attach by project root (.git is the marker):
+
+        mkdir -p /tmp/vim-course-demo && cp demo/* /tmp/vim-course-demo/
+        cd /tmp/vim-course-demo && git init -q && git add -A
+        git commit -qm baseline

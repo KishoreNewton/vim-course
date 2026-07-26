@@ -1,0 +1,68 @@
+SECTION 3 - MOVING TO NEOVIM
+What you work on, and where to get it
+=====================================================================
+
+CLONE THE COURSE REPOSITORY (if you have not already)
+
+    git clone https://github.com/KishoreNewton/vim-course
+    cd vim-course
+
+Repository: https://github.com/KishoreNewton/vim-course
+
+
+WHERE YOU WORK IN THIS SECTION
+
+    ~/.config/nvim/   your Neovim config - this is the section where
+                      you start building it for real
+    demo/             the practice files you open while testing it
+
+REQUIREMENT: Neovim 0.11 or newer (0.12 recommended). The course uses
+the modern native LSP wiring, which older versions do not have.
+
+
+THIS SECTION, LECTURE BY LECTURE
+
+    Switching to Neovim
+        Work in:  ~/.config/nvim/ and demo/
+        Files:    ~/.config/nvim/init.vim, demo/sample.py
+        You do:   install Neovim, migrate your settings across, meet
+                  the built-in terminal and :checkhealth
+        Catch up: stages/10-neovim-switch/init.vim
+
+    Colorschemes and Appearance
+        Work in:  ~/.config/nvim/colors/
+        Files:    hackertheme.vim, demo/sample.py
+        You do:   build a custom colorscheme, highlight group by
+                  highlight group
+        Catch up: stages/10-neovim-switch/colors/hackertheme.vim
+
+    Installing Plugins
+        Work in:  ~/.config/nvim/
+        Files:    init.vim
+        You do:   add plugins with vim-plug - surround, treesitter,
+                  gitsigns and friends
+
+    Configuring Neovim with Lua
+        Work in:  ~/.config/nvim/ and demo/
+        Files:    init.lua, lua/myconfig/init.lua,
+                  lua/wordcount/init.lua
+        You do:   learn Lua, migrate init.vim to init.lua, and write
+                  your first plugin module
+        Catch up: stages/12-lua-config/
+
+    Native LSP and Autocompletion
+        Work in:  ~/.config/nvim/ and demo/
+        Files:    init.lua, learn.lua
+        You do:   Mason plus native LSP, completion, go-to-definition
+                  and diagnostics
+        Catch up: stages/13-lsp/
+
+
+CATCHING UP MID-SECTION
+
+    Neovim-era stages are copied into your config folder, for example:
+
+        cp -r stages/12-lua-config/* ~/.config/nvim/
+
+    Sections that use vim-plug need it installed first, then run
+    :PlugInstall inside Neovim.

@@ -1,0 +1,62 @@
+SECTION 1 - INTRODUCTION
+What you work on, and where to get it
+=====================================================================
+
+CLONE THE COURSE REPOSITORY (do this once, now)
+
+    git clone https://github.com/KishoreNewton/vim-course
+    cd vim-course
+
+Repository: https://github.com/KishoreNewton/vim-course
+
+Everything you see me type in this course comes from that one repository.
+Clone it once and keep it around for every section.
+
+
+THE THREE PLACES YOU WORK (across the whole course)
+
+    demo/                        the practice files you edit on camera.
+                                 Break them freely - "git checkout -- ."
+                                 from inside the repo restores them all.
+
+    ~/.config/nvim/              your Neovim config. You build this up
+                                 from scratch across Sections 3 and 4.
+
+    ~/projects/scratchpad.nvim/  the plugin you build with your own
+                                 hands in Section 5.
+
+
+THE FILES INSIDE demo/
+
+    sample.py      a scratch file - greet / calculate / Logger /
+                   DataProcessor. The one to abuse.
+    app.py         a small task-management app (TaskFlow). The realistic
+                   file you navigate and refactor.
+    guide.md       a Markdown command handbook, used for text-object and
+                   search-and-replace practice.
+    test_app.py    the test suite. Matters in Debugging and Testing.
+
+
+THIS SECTION, LECTURE BY LECTURE
+
+    Installing Vim on Any OS
+        Work in:  nothing yet
+        Files:    none - just get Vim installed
+
+    Course Files
+        Work in:  the repo root, then demo/
+        Files:    demo/sample.py
+        You do:   clone the repo, tour it, open your first file in plain
+                  Vim, and learn :q and "git checkout -- ."
+
+    Getting Started with Modes
+        Work in:  demo/
+        Files:    none - just run "vim" for an empty buffer
+        You do:   Normal, Insert, Visual and Command mode explained
+
+
+BEHIND ON CONFIG AT ANY POINT?
+
+    The stages/ folder holds a snapshot of the configuration at every
+    milestone of the course. Copy the matching one and you are instantly
+    caught up. See stages/ in the repository.

@@ -1,0 +1,75 @@
+SECTION 2 - CORE VIM SKILLS
+What you work on, and where to get it
+=====================================================================
+
+CLONE THE COURSE REPOSITORY (if you have not already)
+
+    git clone https://github.com/KishoreNewton/vim-course
+    cd vim-course
+
+Repository: https://github.com/KishoreNewton/vim-course
+
+
+WHERE YOU WORK IN THIS SECTION
+
+    demo/        the practice files (sample.py, app.py, guide.md)
+    ~/.vimrc     your own Vim config, which you start writing here
+
+
+THIS SECTION, LECTURE BY LECTURE
+
+    Configuring Vim with vimrc
+        Work in:  your home folder
+        Files:    ~/.vimrc
+        You do:   write your first vimrc - line numbers, search
+                  behaviour, indentation
+        Catch up: stages/03-essential-vimrc/vimrc
+
+    Advanced Navigation and Motions
+        Work in:  demo/
+        Files:    demo/guide.md
+        You do:   w b e, f t, 0 $ ^, gg G, %, and counts
+
+    Editing Basics - Operators and Text Objects
+        Work in:  demo/
+        Files:    demo/guide.md
+        You do:   d c y plus text objects (iw, i", ip and friends)
+
+    Advanced Editing - Registers and Macros
+        Work in:  demo/
+        Files:    demo/guide.md
+        You do:   registers, the dot command, recording and replaying
+                  macros
+
+    Power Editing: Repeat, Block, and Shape
+        Work in:  demo/
+        Files:    demo/sample.py, demo/guide.md
+        You do:   the dot command, Ctrl-v visual block, and line
+                  shaping with J, >>, gq
+
+    Power Navigation: Marks, Jumps, and the Global Command
+        Work in:  demo/
+        Files:    demo/sample.py, demo/app.py
+        You do:   marks (`a), the jumplist (Ctrl-o / Ctrl-i),
+                  * and # and %, then :g and :v
+
+    File Management with netrw
+        Work in:  demo/
+        Files:    the netrw explorer itself
+        You do:   browse, create, rename and delete files without
+                  leaving Vim
+        Catch up: stages/07-netrw/vimrc
+
+    The Leader Key and Custom Mappings
+        Work in:  your home folder, plus demo/
+        Files:    ~/.vimrc, demo/sample.py
+        You do:   set a leader key and build your own mappings
+
+
+A NOTE ON BREAKING THINGS
+
+    Every file in demo/ is meant to be wrecked. From inside the repo:
+
+        git checkout -- .
+
+    restores all of them at once.

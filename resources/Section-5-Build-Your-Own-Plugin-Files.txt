@@ -1,0 +1,72 @@
+SECTION 5 - BUILD YOUR OWN PLUGIN
+What you work on, and where to get it
+=====================================================================
+
+CLONE THE COURSE REPOSITORY (if you have not already)
+
+    git clone https://github.com/KishoreNewton/vim-course
+    cd vim-course
+
+Repository: https://github.com/KishoreNewton/vim-course
+
+
+WHERE YOU WORK IN THIS SECTION
+
+    ~/projects/scratchpad.nvim/   the plugin you build from nothing
+    ~/.config/nvim/lua/plugins/scratchpad.lua
+                                  the one-file spec that loads it
+
+You are not copying files out of the repo here - you are writing the
+plugin yourself. The repo holds the finished version and per-lecture
+snapshots so you can compare, or catch up if you fall behind.
+
+
+THIS SECTION, LECTURE BY LECTURE
+
+    What The Editor Gives You
+        Work in:  nothing - this one is a tour of the built-in manual
+        Files:    :h lua-guide, :h write-plugin, :h runtimepath,
+                  :h news, :h help-summary
+        You do:   see everything Neovim exposes (api, fn, opt, keymap,
+                  lsp, treesitter, diagnostic, uv, ui) and learn how to
+                  find the docs for any function - :h <name>, Ctrl-]
+                  and Ctrl-o, gO, <leader>fh, and :helpgrep
+
+    Your First Plugin
+        Work in:  ~/projects/scratchpad.nvim/
+        Files:    lua/scratchpad/init.lua
+                  ~/.config/nvim/lua/plugins/scratchpad.lua
+        You do:   a plugin is just a folder - runtimepath, the module
+                  pattern, and a lazy "dir=" spec
+        Catch up: stages/21-first-plugin/
+
+    Config, Commands, and Keymaps
+        Work in:  ~/projects/scratchpad.nvim/
+        Files:    lua/scratchpad/init.lua
+        You do:   defaults plus a config merge, the :Scratch command,
+                  and a <leader>j mapping
+        Catch up: stages/22-commands-config/
+
+    The Floating Window
+        Work in:  ~/projects/scratchpad.nvim/
+        Files:    lua/scratchpad/init.lua
+        You do:   buffers versus windows, nvim_open_win, toggling, and
+                  save-on-q
+        Catch up: stages/23-floating-window/
+
+    Ship Your Plugin
+        Work in:  ~/projects/scratchpad.nvim/
+        Files:    README.md, doc/scratchpad.txt
+        You do:   a README, a real :help file with helptags, and
+                  publishing to git
+
+
+STARTING FROM A SNAPSHOT
+
+    mkdir -p ~/projects/scratchpad.nvim
+    cp -r stages/21-first-plugin/lua ~/projects/scratchpad.nvim/
+    cp stages/21-first-plugin/plugins-scratchpad.lua \
+       ~/.config/nvim/lua/plugins/scratchpad.lua
+
+The finished plugin lives in scratchpad.nvim/ in this repository -
+diff your build against it, break it, extend it, and publish your own.
