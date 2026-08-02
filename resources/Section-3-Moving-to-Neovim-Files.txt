@@ -36,6 +36,13 @@ THIS SECTION, LECTURE BY LECTURE
                   highlight group
         Catch up: stages/10-neovim-switch/colors/hackertheme.vim
 
+    A Permanent Theme and a Plugin Manager
+        Work in:  ~/.config/nvim/
+        Files:    init.vim
+        You do:   add the colorscheme line to your config so the theme
+                  loads on every start, install vim-plug with one curl
+                  command, and write the empty plug block
+
     Installing Plugins
         Work in:  ~/.config/nvim/
         Files:    init.vim

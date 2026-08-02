@@ -57,6 +57,7 @@ are instantly caught up.
 |---|---|---|---|
 | Switching to Neovim | `~/.config/nvim/` + `demo/` | `~/.config/nvim/init.vim`, `sample.py` | Install Neovim (0.11+), migrate your settings, meet the built-in terminal & `:checkhealth` |
 | Colorschemes and Appearance | `~/.config/nvim/colors/` | `hackertheme.vim`, `sample.py` | Build a custom colorscheme highlight-group by highlight-group |
+| **A Permanent Theme and a Plugin Manager** | `~/.config/nvim/` | `init.vim` | Add `colorscheme hackertheme` to the config; install vim-plug with the official curl command; write the empty `plug#begin`/`plug#end` block |
 | Installing Plugins | `~/.config/nvim/` | `init.vim` | Add plugins with vim-plug (surround, treesitter, gitsigns, …) |
 | Configuring Neovim with Lua | `~/.config/nvim/` + `demo/` | `init.lua`, `lua/myconfig/init.lua`, `lua/wordcount/init.lua` | Learn Lua, migrate `init.vim` → `init.lua`, write your first plugin module |
 | Native LSP and Autocompletion | `~/.config/nvim/` + `demo/` | `init.lua`, `learn.lua` | Mason + native LSP, completion, go-to-definition, diagnostics |
