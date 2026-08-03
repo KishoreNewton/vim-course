@@ -67,6 +67,7 @@ are instantly caught up.
 | Lecture | Work in | File(s) | What you do |
 |---|---|---|---|
 | Quick Reference and Cheatsheet | — | *(recap)* | A consolidated cheat-sheet of everything so far |
+| **Clean Slate: Swapping the Engine** | `~/.config/nvim/` | `init.lua`, `lua/config/lazy.lua` | Read the config you actually built, understand why vim-plug has to go, then install lazy.nvim with its real bootstrap |
 | A Modern Modular Config | `~/.config/nvim/` | `init.lua`, `lua/config/{options,keymaps,lazy}.lua`, `lua/plugins/`, `lsp/` | Split the flat config into a real modular layout; switch to lazy.nvim |
 | **Install the Finished Config** | `~/.config/nvim/` + `demo/` | swaps in `~/vim-course/nvim/`; opens `app.py` | Back up your build, install the finished editor, first boot (`:Lazy`, `:Mason`) |
 | The Complete IDE Setup | `~/.config/nvim/` + `demo/` | `lua/config/options.lua`, `app.py` | Grand tour of the finished editor — pickers, git signs, statusline |

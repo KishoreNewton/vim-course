@@ -39,6 +39,13 @@ THIS SECTION, LECTURE BY LECTURE
     Quick Reference and Cheatsheet
         Files:    this repo README plus nvim/README.md
 
+    Clean Slate: Swapping the Engine
+        Work in:  ~/.config/nvim/
+        Files:    init.lua, lua/config/lazy.lua
+        You do:   read the config you have actually built so far, see
+                  why the old plugin manager has to go, delete it, and
+                  install lazy.nvim with its real bootstrap block
+
     A Modern Modular Config
         Work in:  ~/.config/nvim/
         Files:    init.lua, lua/config/options.lua, keymaps.lua,
