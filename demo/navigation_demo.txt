@@ -1,0 +1,30 @@
+Line  1: The quick brown fox jumps over the lazy dog
+Line  2: Pack my box with five dozen liquor jugs
+Line  3: How vexingly quick daft zebras jump
+Line  4: The five boxing wizards jump quickly
+Line  5: Sphinx of black quartz judge my vow
+Line  6: Two driven jocks help fax my big quiz
+Line  7: The jay pig fox and zebra moved quickly
+Line  8: Grumpy wizards make toxic brew for the evil queen
+Line  9: Amazingly few discotheques provide jukeboxes
+Line 10: How quickly daft jumping zebras vex
+Line 11: The quick brown fox jumps over the lazy dog
+Line 12: Pack my box with five dozen liquor jugs
+Line 13: How vexingly quick daft zebras jump
+Line 14: The five boxing wizards jump quickly
+Line 15: Sphinx of black quartz judge my vow
+Line 16: Two driven jocks help fax my big quiz
+Line 17: The jay pig fox and zebra moved quickly
+Line 18: Grumpy wizards make toxic brew for the evil queen
+Line 19: Amazingly few discotheques provide jukeboxes
+Line 20: How quickly daft jumping zebras vex
+Line 21: The quick brown fox jumps over the lazy dog
+Line 22: Pack my box with five dozen liquor jugs
+Line 23: How vexingly quick daft zebras jump
+Line 24: The five boxing wizards jump quickly
+Line 25: Sphinx of black quartz judge my vow
+Line 26: Two driven jocks help fax my big quiz
+Line 27: The jay pig fox and zebra moved quickly
+Line 28: Grumpy wizards make toxic brew for the evil queen
+Line 29: Amazingly few discotheques provide jukeboxes
+Line 30: How quickly daft jumping zebras vex
