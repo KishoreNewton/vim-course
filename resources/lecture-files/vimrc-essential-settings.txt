@@ -1,0 +1,22 @@
+" =====================================================================
+"  LECTURE: Configuring Vim with vimrc
+"  Save this file as:  ~/.vimrc
+"
+"  This is exactly what is typed on screen in that lecture - nothing
+"  more. Every later lecture builds on top of this file.
+"
+"  Create it with:   touch ~/.vimrc && vim ~/.vimrc
+"  Course repo:      https://github.com/KishoreNewton/vim-course
+" =====================================================================
+
+" Essential Vim settings
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase

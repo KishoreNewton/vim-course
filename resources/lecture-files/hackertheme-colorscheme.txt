@@ -1,0 +1,46 @@
+" =====================================================================
+"  LECTURE: Colorschemes and Appearance
+"  Save this file as:  ~/.config/nvim/colors/hackertheme.vim
+"
+"  Create the folder first:
+"      mkdir -p ~/.config/nvim/colors
+"
+"  Then load it with:   :colorscheme hackertheme
+"
+"  This is the complete theme as built across all three parts of the
+"  lecture - the skeleton, the palette, and the finishing touches.
+"
+"  Course repo:  https://github.com/KishoreNewton/vim-course
+" =====================================================================
+
+" hackertheme - a dark hacker colorscheme
+set background=dark
+hi clear
+let g:colors_name = "hackertheme"
+
+" --- the palette -----------------------------------------------------
+hi Normal guifg=#00ff00 guibg=NONE
+hi Comment guifg=#D1D1D1 gui=italic
+hi String guifg=#FFF066
+hi Function guifg=#9DE0AD
+hi Keyword guifg=#A9D0F5 gui=italic
+hi Operator guifg=#FFDCA2 gui=bold
+hi Number guifg=#EFF0EB gui=bold
+hi Boolean guifg=#86E3CE
+
+" --- finishing touches -----------------------------------------------
+hi Visual guifg=#000000 guibg=#FFFFFF
+hi CursorLine guibg=#1a1a1a
+hi LineNr guifg=#FDE4E3
+hi Search guifg=#0a0a0a guibg=#9DE0AD
+hi MatchParen guifg=#0a0a0a guibg=#FFDCA2 gui=bold
+hi Pmenu guibg=#0a0a0f guifg=#e0e0e0
+hi PmenuSel guibg=#00ff00 guifg=#000000 gui=bold
+hi StatusLine guifg=#FDE4E3 guibg=#000000
+
+" Treesitter groups follow the classic ones
+hi! link @keyword Keyword
+hi! link @function Function
+hi! link @string String
+hi! link @comment Comment
+hi! link @variable Identifier

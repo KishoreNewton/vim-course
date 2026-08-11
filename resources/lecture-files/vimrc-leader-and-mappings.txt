@@ -1,0 +1,50 @@
+" =====================================================================
+"  LECTURE: The Leader Key and Custom Mappings
+"  Save this file as:  ~/.vimrc
+"
+"  This is your vimrc as it stands at the END of that lecture: the
+"  essential settings from "Configuring Vim with vimrc", plus the three
+"  blocks added here - the leader key and mappings, appearance, and
+"  productivity settings.
+"
+"  Course repo:  https://github.com/KishoreNewton/vim-course
+" =====================================================================
+
+" Essential Vim settings
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" Vexplore opens files in the previous (right-hand) window
+" - added during the netrw lecture
+let g:netrw_browse_split=4
+
+" Leader key settings
+let mapleader = ' '
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>e :Explore<CR>
+inoremap jk <Esc>
+
+" Appearance settings
+set cursorline
+set scrolloff=8
+set colorcolumn=80
+set nowrap
+set mouse=a
+set cursorcolumn
+
+" Productivity settings
+set clipboard=unnamedplus
+set wildmenu
+set wildmode=longest:list:full
+set nobackup noswapfile
+set autoread
+set hidden
