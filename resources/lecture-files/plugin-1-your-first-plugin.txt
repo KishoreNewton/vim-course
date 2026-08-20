@@ -1,0 +1,31 @@
+=====================================================================
+ LECTURE: Your First Plugin
+
+ The plugin exactly as it stands at the end of this lecture: a module table, one function, and the spec that loads it.
+
+ Two files. Save them as:
+     ~/.config/nvim/lua/plugins/scratchpad.lua   (the spec below)
+     <your plugin folder>/lua/scratchpad/init.lua
+
+ Course repo:  https://github.com/KishoreNewton/vim-course
+=====================================================================
+
+--------------------- lua/scratchpad/init.lua -----------------------
+local M = {}
+
+function M.setup()
+  print("scratchpad: ready")
+end
+
+return M
+
+----------------- lua/plugins/scratchpad.lua (spec) -----------------
+-- Section 21: the lazy.nvim spec that loads the local plugin folder.
+-- This file lives at ~/.config/nvim/lua/plugins/scratchpad.lua
+return {
+  {
+    dir = vim.fn.expand("~/projects/scratchpad.nvim"),
+    opts = {},
+    lazy = false, -- this config lazy-loads by default; wake ours at boot
+  },
+}

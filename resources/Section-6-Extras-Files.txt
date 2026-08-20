@@ -1,0 +1,52 @@
+SECTION 6 - EXTRAS: KEEPING IT WORKING
+Commands and files for the two lectures in this section
+=====================================================================
+
+Repository: https://github.com/KishoreNewton/vim-course
+
+Nothing new gets written to disk in this section. Both lectures work on
+the config you already have, so there is no file to download - what you
+need is the command list. Here it is, in the order it appears on screen.
+
+
+LECTURE: Your Config, Under Control
+    Work in:  ~/.config/nvim
+
+    Thirty seconds of insurance
+        cd ~/.config/nvim
+        git init
+        git status --short
+        git add -A
+        git commit -m "my editor"
+        git log --oneline
+
+    The second machine
+        git clone ~/.config/nvim ~/.config/machine-two
+        ls ~/.config/machine-two
+
+    Try things without fear
+        git checkout -b experiment
+        nvim lua/config/options.lua      # break something on purpose
+        git checkout main                # and it is gone
+
+
+LECTURE: When It Breaks
+    Work in:  ~/.config/nvim
+
+    Read the red
+        :messages                        # the error you missed on startup
+
+    The ladder - work down it in order
+        nvim --clean                     # is it your config, or the editor?
+        :checkhealth                     # what the editor thinks is wrong
+        :Lazy                            # plugin state, versions, errors
+
+    Git is the real undo
+        git diff                         # what did I change?
+        git checkout -- lua/config/options.lua
+        git log --oneline                # go back to any known-good commit
+
+
+A NOTE ON ORDER
+    The ladder matters. `nvim --clean` first tells you whether the problem
+    is yours at all. Only then is :checkhealth and :Lazy worth reading.

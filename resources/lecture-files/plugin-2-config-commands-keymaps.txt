@@ -1,0 +1,50 @@
+=====================================================================
+ LECTURE: Config, Commands, and Keymaps
+
+ The plugin after adding a config table with a merge, a user command, and a keymap.
+
+ Two files. Save them as:
+     ~/.config/nvim/lua/plugins/scratchpad.lua   (the spec below)
+     <your plugin folder>/lua/scratchpad/init.lua
+
+ Course repo:  https://github.com/KishoreNewton/vim-course
+=====================================================================
+
+--------------------- lua/scratchpad/init.lua -----------------------
+local M = {}
+
+M.config = {
+  dir = vim.fn.stdpath("data") .. "/scratchpad",
+  keymap = "<leader>j",
+}
+
+local function note_path()
+  local project = vim.fn.getcwd():gsub("[^%w]", "_")
+  return M.config.dir .. "/" .. project .. ".md"
+end
+
+function M.open()
+  vim.fn.mkdir(M.config.dir, "p")
+  vim.cmd.split(note_path())
+end
+
+function M.setup(opts)
+  M.config = vim.tbl_deep_extend("force", M.config, opts or {})
+  vim.api.nvim_create_user_command("Scratch", M.open, {
+    desc = "Project scratchpad",
+  })
+  vim.keymap.set("n", M.config.keymap, M.open, { desc = "Scratchpad" })
+end
+
+return M
+
+----------------- lua/plugins/scratchpad.lua (spec) -----------------
+-- Section 22: spec unchanged from Section 21 — defaults do the talking.
+-- This file lives at ~/.config/nvim/lua/plugins/scratchpad.lua
+return {
+  {
+    dir = vim.fn.expand("~/projects/scratchpad.nvim"),
+    opts = {},
+    lazy = false, -- this config lazy-loads by default; wake ours at boot
+  },
+}
