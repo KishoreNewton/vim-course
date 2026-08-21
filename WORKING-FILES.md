@@ -24,6 +24,8 @@ cd vim-course
 | `app.py` | A small task-management app (TaskFlow). The realistic file you navigate and refactor. |
 | `guide.md` | A Markdown command handbook — used for text-object and search-and-replace practice. |
 | `test_app.py` | The test suite. Matters in the Debugging & Testing lecture. |
+| `shopping.txt` | A deliberately unsorted list with one duplicate — so `:%!sort` and `:%!sort -u` visibly differ. |
+| `notes.md` | A short notes file to read shell output into with `:r !`. |
 
 Behind on config? Copy the matching snapshot from [`stages/`](stages/) and you
 are instantly caught up.
@@ -50,6 +52,7 @@ are instantly caught up.
 | **Power Navigation: Marks, Jumps, and the Global Command** | `demo/` | `sample.py`, `app.py` | Marks (`` `a ``), the jumplist (`Ctrl-o` / `Ctrl-i`), `*` / `#` / `%`, `:g` / `:v` |
 | File Management with netrw | `demo/` | *(netrw explorer)* | Browse, create, rename, delete files without leaving Vim |
 | The Leader Key and Custom Mappings | `~/` + `demo/` | `~/.vimrc`, `sample.py` | Set a leader key and build your own mappings |
+| **The Bang: Shell Commands Without Leaving** | `demo/` | `shopping.txt`, `notes.md` | `:!cmd`, `%` as the current filename, `:!!` to repeat, `:r !` to pull output in, `:%!sort` / `sort -u` and `!2jsort` to filter text through a command |
 
 ## Section 3 — Moving to Neovim
 

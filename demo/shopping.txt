@@ -1,0 +1,7 @@
+pears
+apples
+cherries
+bananas
+apples
+dates
+elderberries
