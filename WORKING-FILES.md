@@ -26,6 +26,7 @@ cd vim-course
 | `test_app.py` | The test suite. Matters in the Debugging & Testing lecture. |
 | `shopping.txt` | A deliberately unsorted list with one duplicate — so `:%!sort` and `:%!sort -u` visibly differ. |
 | `notes.md` | A short notes file to read shell output into with `:r !`. |
+| `draft.txt` | A tiny checklist used for the undo lectures — edit it freely, that is the point. |
 
 Behind on config? Copy the matching snapshot from [`stages/`](stages/) and you
 are instantly caught up.
@@ -53,6 +54,8 @@ are instantly caught up.
 | File Management with netrw | `demo/` | *(netrw explorer)* | Browse, create, rename, delete files without leaving Vim |
 | The Leader Key and Custom Mappings | `~/` + `demo/` | `~/.vimrc`, `sample.py` | Set a leader key and build your own mappings |
 | **The Bang: Shell Commands Without Leaving** | `demo/` | `shopping.txt`, `notes.md` | `:!cmd`, `%` as the current filename, `:!!` to repeat, `:r !` to pull output in, `:%!sort` / `sort -u` and `!2jsort` to filter text through a command |
+| **Undo Is a Time Machine** | `demo/` + `~/.vimrc` | `draft.txt`, `~/.vimrc` | Undo is a *tree*: `g-` / `g+` walk time and recover branches `u` can never reach, `:undolist`, `:earlier` / `:later` by clock, and `undofile` + `undodir` so history survives quitting |
+| **Autocomplete Was Always There** | `demo/` | `app.py` | Built-in completion with zero plugins — `Ctrl-n` / `Ctrl-p` from the buffer, `Ctrl-y` accept / `Ctrl-e` cancel, `Ctrl-x Ctrl-f` real paths, `Ctrl-x Ctrl-l` whole lines, and the `complete` option |
 
 ## Section 3 — Moving to Neovim
 
