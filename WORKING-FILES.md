@@ -27,6 +27,7 @@ cd vim-course
 | `shopping.txt` | A deliberately unsorted list with one duplicate — so `:%!sort` and `:%!sort -u` visibly differ. |
 | `notes.md` | A short notes file to read shell output into with `:r !`. |
 | `draft.txt` | A tiny checklist used for the undo lectures — edit it freely, that is the point. |
+| `src/`, `tests/` | A small nested project — `:find`, `path+=**` and `**/*.py` only mean anything when files sit in folders. |
 
 Behind on config? Copy the matching snapshot from [`stages/`](stages/) and you
 are instantly caught up.
@@ -56,6 +57,7 @@ are instantly caught up.
 | **The Bang: Shell Commands Without Leaving** | `demo/` | `shopping.txt`, `notes.md` | `:!cmd`, `%` as the current filename, `:!!` to repeat, `:r !` to pull output in, `:%!sort` / `sort -u` and `!2jsort` to filter text through a command |
 | **Undo Is a Time Machine** | `demo/` + `~/.vimrc` | `draft.txt`, `~/.vimrc` | Undo is a *tree*: `g-` / `g+` walk time and recover branches `u` can never reach, `:undolist`, `:earlier` / `:later` by clock, and `undofile` + `undodir` so history survives quitting |
 | **Autocomplete Was Always There** | `demo/` | `app.py` | Built-in completion with zero plugins — `Ctrl-n` / `Ctrl-p` from the buffer, `Ctrl-y` accept / `Ctrl-e` cancel, `Ctrl-x Ctrl-f` real paths, `Ctrl-x Ctrl-l` whole lines, and the `complete` option |
+| **Finding Files Without a Plugin** | `demo/` + `~/.vimrc` | `src/`, `tests/`, `~/.vimrc` | `set path+=**` so `:find <name>` opens any file by name, then Vim 9's `findfunc` + `matchfuzzy()` turn `:find` into a real fuzzy finder in five lines; plus `:b <fragment>` and `:vimgrep` / `:copen` |
 
 ## Section 3 — Moving to Neovim
 
