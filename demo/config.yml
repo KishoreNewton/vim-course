@@ -1,0 +1,5 @@
+service: checkout
+replicas: 2
+timeout: 30
+region: eu-west-1
+debug: false
