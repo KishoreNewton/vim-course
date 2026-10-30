@@ -1,0 +1,7 @@
+{
+  "name": "comet.nvim",
+  "version": "1.0.0",
+  "dependencies": {
+    "neovim": "^5.5.0"
+  }
+}

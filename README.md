@@ -26,6 +26,7 @@ At a glance:
 | 3 — Moving to Neovim | `~/.config/nvim/` (build it up) + `demo/` |
 | 4 — Building a Modern IDE | the finished `~/.config/nvim/` (from `nvim/`) + `demo/` |
 | 5 — Build Your Own Plugin | `~/projects/scratchpad.nvim/` |
+| 6 — Plugins in Any Language | `~/projects/hello-node/`, `~/projects/comet.nvim/`, `~/projects/mammoth.nvim/` |
 
 ## The modern config (Sections 15–19)
 
@@ -110,6 +111,41 @@ cp stages/21-first-plugin/plugins-scratchpad.lua \
 
 The finished plugin lives in [`scratchpad.nvim/`](scratchpad.nvim/) — diff
 your build against it, break it, extend it, and publish your own.
+
+## Plugins in any language (Sections 27–29)
+
+The editor is also a msgpack-RPC server, so a plugin can be written in any
+language: a few lines of Lua start your program with
+`jobstart({ ... }, { rpc = true })` and the rest happens on the other side of
+the pipe.
+
+| Folder | Section | What it is |
+|---|---|---|
+| `hello-node/` | 27 | The eight-line Node plugin: answers a request, writes into the buffer |
+| `stages/28-comet-green-box/` | 28 | comet.nvim stage 1 — one green block that follows the cursor |
+| `comet.nvim/` | 28 | The finished cursor comet (Node.js): exponential chase, heat, eight shades |
+| `mammoth.nvim/` | 29 | Opens multi-gigabyte files instantly (Rust): mmap + a sparse line index |
+
+Requirements: `node` and `npm` for comet, `cargo` for mammoth.
+
+```sh
+# comet.nvim
+mkdir -p ~/projects && cp -r comet.nvim ~/projects/
+cd ~/projects/comet.nvim && npm install
+cp ~/vim-course/stages/28-comet-green-box/plugins-comet.lua \
+   ~/.config/nvim/lua/plugins/comet.lua
+
+# mammoth.nvim
+cp -r ~/vim-course/mammoth.nvim ~/projects/
+cd ~/projects/mammoth.nvim && cargo build --release
+mkdir -p ~/logs && cargo run --release --bin gen -- ~/logs/server.log 2G
+```
+
+The mammoth spec has the same shape as comet's, with `dir` pointing at
+`~/projects/mammoth.nvim`. `lazy = false` matters for both: comet starts with
+the editor, and mammoth has to be loaded before the editor reads a big file so
+it can claim it. `:CometStats` prints the comet's frame cost; `:Mammoth {file}`
+and `:MammothFind {text}` open and search any file.
 
 ## Demo files
 

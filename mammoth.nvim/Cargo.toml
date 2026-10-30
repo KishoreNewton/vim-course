@@ -1,0 +1,12 @@
+[package]
+name = "mammoth"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+memchr = "2"
+memmap2 = "0.9"
+rmpv = "1"
+
+[profile.release]
+opt-level = 3
