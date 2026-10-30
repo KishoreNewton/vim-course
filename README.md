@@ -126,7 +126,10 @@ the pipe.
 | `comet.nvim/` | 28 | The finished cursor comet (Node.js): exponential chase, heat, eight shades |
 | `mammoth.nvim/` | 29 | Opens multi-gigabyte files instantly (Rust): mmap + a sparse line index |
 
-Requirements: `node` and `npm` for comet, `cargo` for mammoth.
+Requirements: `node` and `npm` for comet, `cargo` for mammoth. Step-by-step
+installs for Linux, macOS and Windows (nvm and rustup, into your home
+directory) are in
+[`resources/Section-7-Plugins-in-Any-Language-Files.txt`](resources/Section-7-Plugins-in-Any-Language-Files.txt).
 
 ```sh
 # comet.nvim

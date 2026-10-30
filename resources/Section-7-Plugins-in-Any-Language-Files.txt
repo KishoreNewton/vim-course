@@ -1,0 +1,150 @@
+SECTION 7 - PLUGINS IN ANY LANGUAGE
+What to install, what you work on, and where to get it
+=====================================================================
+
+CLONE THE COURSE REPOSITORY (if you have not already)
+
+    git clone https://github.com/KishoreNewton/vim-course
+    cd vim-course
+
+Repository: https://github.com/KishoreNewton/vim-course
+
+
+WHAT YOU NEED INSTALLED
+
+    Node.js and npm    for hello-node and comet.nvim
+    Rust (cargo)       for mammoth.nvim
+
+Install both into your own user account, not system-wide. Neither one
+needs sudo that way, upgrades never fight your package manager, and
+the editor finds them on the same PATH your shell uses.
+
+
+INSTALL NODE.JS (with npm)
+
+    Linux and macOS - nvm, into ~/.nvm
+
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
+
+    Close the terminal and open a new one, then:
+
+        nvm install --lts
+        nvm alias default 'lts/*'
+
+    macOS with Homebrew works too:
+
+        brew install node
+
+    Windows - the LTS installer from nodejs.org, or:
+
+        winget install OpenJS.NodeJS.LTS
+
+    Check it (open a NEW terminal first):
+
+        node --version          # any version from the last few years
+        npm --version           # npm comes with Node
+
+    Your distribution's own package (apt, dnf, pacman) also works if
+    `node --version` prints 18 or newer. Older releases ship an older
+    Node - use nvm there instead.
+
+
+INSTALL RUST (with cargo)
+
+    Linux and macOS - rustup, into ~/.cargo and ~/.rustup
+
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+    Pick the default install when it asks, then load it into the
+    current shell (new terminals get it automatically):
+
+        . "$HOME/.cargo/env"
+
+    Rust needs a C linker to build anything:
+
+        Debian/Ubuntu:  sudo apt install build-essential
+        Fedora:         sudo dnf install gcc
+        Arch:           sudo pacman -S base-devel
+        macOS:          xcode-select --install
+
+    Windows - run rustup-init.exe from rustup.rs, or:
+
+        winget install Rustlang.Rustup
+
+    and let it install the Visual Studio C++ build tools when it offers.
+
+    Check it (open a NEW terminal first):
+
+        rustc --version
+        cargo --version
+
+    Keep it current later with:  rustup update
+
+
+ONE THING THAT CATCHES PEOPLE
+
+    The editor starts `node` and the mammoth binary with jobstart, using
+    the PATH it was started with. Start nvim from a terminal where
+    `node --version` works and you are fine. If you launch it from a
+    desktop menu and comet never appears, that launcher does not see
+    ~/.nvm - start nvim from the terminal instead.
+
+
+WHERE YOU WORK IN THIS SECTION
+
+    ~/projects/hello-node/        the eight-line Node plugin
+    ~/projects/comet.nvim/        the cursor comet (Node.js)
+    ~/projects/mammoth.nvim/      the big-file viewer (Rust)
+    ~/.config/nvim/lua/plugins/comet.lua
+    ~/.config/nvim/lua/plugins/mammoth.lua
+                                  the specs that load them
+
+
+THIS SECTION, LECTURE BY LECTURE
+
+    The Editor Speaks Every Language
+        Work in:  ~/projects/hello-node/
+        Files:    hello.mjs, package.json
+        You do:   msgpack-RPC requests and notifications, jobstart with
+                  rpc = true, why npm install neovim is a client library
+                  and not the editor, why the file ends in .mjs
+        Setup:    mkdir -p ~/projects/hello-node && cd ~/projects/hello-node
+                  npm install neovim
+
+    A Comet Cursor in Node.js
+        Work in:  ~/projects/comet.nvim/
+        Files:    comet.mjs, lua/comet/init.lua
+        You do:   the Lua half that forwards cursor moves, the Node half
+                  that animates them, and why it costs almost nothing
+        Catch up: stages/28-comet-green-box/  (one green box that follows
+                  the cursor - the first working version)
+
+    Opening a 2 GB File with Rust
+        Work in:  ~/projects/mammoth.nvim/
+        Files:    src/main.rs, src/bin/gen.rs, lua/mammoth/init.lua
+        You do:   map the file instead of loading it, index line breaks,
+                  answer requests from Rust, show a window onto the file
+
+
+STARTING FROM THE FINISHED PLUGINS
+
+    comet.nvim
+
+        mkdir -p ~/projects && cp -r comet.nvim ~/projects/
+        cd ~/projects/comet.nvim && npm install
+        cp ~/vim-course/stages/28-comet-green-box/plugins-comet.lua \
+           ~/.config/nvim/lua/plugins/comet.lua
+
+    mammoth.nvim
+
+        cp -r ~/vim-course/mammoth.nvim ~/projects/
+        cd ~/projects/mammoth.nvim && cargo build --release
+        mkdir -p ~/logs && cargo run --release --bin gen -- ~/logs/server.log 2G
+
+    The last line writes a 2 GB test log. Make sure you have the space
+    free, and delete ~/logs/server.log when you are done with it.
+
+    The mammoth spec has the same shape as comet's, with `dir` pointing
+    at ~/projects/mammoth.nvim. Keep `lazy = false` in both: comet starts
+    with the editor, and mammoth has to be loaded before the editor
+    reads a big file so it can claim it.
